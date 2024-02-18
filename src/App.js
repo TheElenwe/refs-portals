@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Player from './components/Player.jsx';
+import TimerChallenge from './components/TimerChallenge.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Player />
+      <div id="challenges">
+        <TimerChallenge title="Easy" targetTime={1} />
+        <TimerChallenge title="Not easy" targetTime={5} />
+        <TimerChallenge title="Getting tough" targetTime={10} />
+        <TimerChallenge title="Pros only" targetTime={15} />
+      </div>
+    </>
   );
 }
 
